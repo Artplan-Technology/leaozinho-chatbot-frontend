@@ -326,7 +326,7 @@
     }
     
     async sendToWebhook(message) {
-        const USE_MOCK = true; // Mude para false quando conectar ao N8N
+        const USE_MOCK = false; // Mude para false quando conectar ao N8N
         
         if (USE_MOCK) {
             await new Promise(resolve => setTimeout(resolve, 1500));
