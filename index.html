@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leãozinho - Assistente de Mídia</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="/assets/js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <!-- Header da Sidebar -->
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <img src="./assets/img/logo-llittle-lion.png" alt="">
+                </div>
+                <div class="sidebar-title">Leãozinho</div>
+            </div>
+
+            <!-- Botão Nova Conversa 
+            <button class="new-chat-btn" id="newChatBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Nova Conversa
+            </button>-->
+
+           
+
+            <!-- Footer da Sidebar -->
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">👤</div>
+                    <div class="user-name">Usuário</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- Header Principal -->
+            <header class="main-header">
+                <button class="toggle-sidebar-btn" id="toggleSidebarBtn" title="Alternar sidebar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+
+                <div class="bot-info-header">
+                    <div class="bot-avatar-header">
+                        <img src="./assets/img/logo-llittle-lion.png" alt="logo">
+                    </div>
+                    <div>
+                        <div class="bot-title">Leãozinho</div>
+                        <div class="bot-status">
+                            <span class="status-dot"></span>
+                            Online
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Quick Buttons -->
+            <div class="quick-buttons-row">
+                <button class="quick-btn" data-intent="ga4_metrics">📊 Métricas GA4</button>
+                <button class="quick-btn" data-intent="ga4_7days">📈 GA4 (Últ. 7 dias)</button>
+                <button class="quick-btn" data-intent="media_plan">🎯 Plano de Mídias</button>
+                <button class="quick-btn" data-intent="sports_events">⚽ Jogos/Calendário</button>
+            </div>
+
+            <!-- Messages Area -->
+            <div class="chat-messages" id="chatMessages">
+                <!-- Empty State -->
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-state-icon">
+                        <img src="./assets/img/logo-llittle-lion.png" alt="logo">
+                    </div>
+                    <div class="empty-state-title">Viva a Magia de Vegas!</div>
+                    <div class="empty-state-description">
+                        Olá! Sou o Leãozinho, seu assistente de elite para análise de dados de mídia. 
+                        Posso ajudar com métricas GA4, plano de mídias, calendário de jogos e correlações. 
+                        Como posso ajudar você hoje?
+                    </div>
+                    <div class="empty-state-buttons">
+                        <button class="quick-btn" data-intent="ga4_metrics">Ver Métricas</button>
+                        <button class="quick-btn" data-intent="media_plan">Planejar Mídia</button>
+                        <button class="quick-btn" data-intent="sports_events">Ver Jogos</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="message-avatar" style="background: var(--gold-light); border: 1px solid var(--gold);">
+                    <img src="./assets/img/logo-llittle-lion.png" alt="logo">
+                </div>
+                <div class="typing-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <span class="typing-text">Leãozinho está pensando...</span>
+            </div>
+
+            <!-- Contextual Suggestions -->
+            <div id="contextualSuggestions"></div>
+
+            <!-- Input Area -->
+            <div class="chat-input-area">
+                <div class="validation-alert" id="validationAlert"></div>
+                <div class="input-container">
+                    <textarea 
+                        id="messageInput" 
+                        placeholder="Digite sua pergunta sobre GA4, Plano de Mídias ou Jogos..."
+                        rows="1"
+                        maxlength="600"
+                    ></textarea>
+                    <button id="sendButton" title="Enviar mensagem" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Libs para Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+</body>
+</html>
+                
