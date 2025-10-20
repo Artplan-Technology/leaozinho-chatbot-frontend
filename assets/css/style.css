@@ -691,7 +691,7 @@ body {
         height: 100vh;
         z-index: 1000;
         box-shadow: 2px 0 10px rgba(0,0,0,0.5);
-        width: 300px;
+        width: 330px;
     }
     
     .sidebar.collapsed {
@@ -721,7 +721,7 @@ body {
     }
 
     #main-content.shifted {
-        transform: translateX(300px);
+        transform: translateX(320px);
         transition: transform 0.3s ease;
     }
 }
