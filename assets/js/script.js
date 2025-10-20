@@ -447,7 +447,7 @@
             console.error('Erro ao enviar mensagem:', error);
             this.hideTypingIndicator();
             await this.addBotMessage(
-                "🦁 Ops! Problema na conexão. Tente de novo.",
+                "Ops! Problema na conexão. Tente de novo.",
                 {
                     intent: 'error',
                     customSuggestions: ['Tentar novamente', 'Falar com um humano']
@@ -505,7 +505,7 @@
         
         if (type === 'bot') {
             const img = document.createElement('img');
-            img.src = '../Leaozinho-update/assets/img/logo-llittle-lion.png';
+            img.src = './assets/img/logo-llittle-lion.png';
             img.alt = 'Leãozinho';
             img.style.width = '28px';      // ajuste conforme o layout
             img.style.height = '28px';
