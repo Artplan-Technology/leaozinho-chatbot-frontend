@@ -121,9 +121,9 @@
         });
         
         // Nova conversa
-        document.getElementById('newChatBtn').addEventListener('click', () => {
-            this.newConversation();
-        });
+        // document.getElementById('newChatBtn').addEventListener('click', () => {
+        //     this.newConversation();
+        // });
         
         this.scopeSelect = document.getElementById('scopeSelect');
     }
