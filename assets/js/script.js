@@ -11,7 +11,7 @@
         this.sidebar = document.getElementById('sidebar');
         this.toggleSidebarBtn = document.getElementById('toggleSidebarBtn');
         
-        this.webhookUrl = 'https://n8n.srv871883.hstgr.cloud/webhook-test/leaozinhoccccc';
+        this.webhookUrl = 'https://n8n.srv871883.hstgr.cloud/webhook-test/leo';
         this.isTyping = false;
         this.sessionID = this.getSessionID();
         this.messageCount = 0;
