@@ -1,6 +1,7 @@
  class ChatBot {
     constructor() {
         this.messageInput = document.getElementById('messageInput');
+        this.mainContent = document.getElementById('main-content'); // O ID foi adicionado ao <main> no HTML
         this.sendButton = document.getElementById('sendButton');
         this.chatMessages = document.getElementById('chatMessages');
         this.typingIndicator = document.getElementById('typingIndicator');
@@ -83,14 +84,23 @@
     }
     
     setupEventListeners() {
-        // Toggle sidebar
-        this.toggleSidebarBtn.addEventListener('click', () => {
+        
+      this.toggleSidebarBtn.addEventListener('click', () => {
             this.sidebar.classList.toggle('collapsed');
+
+            // Se sidebar está aberta, adiciona classe no main-content
+            if (!this.sidebar.classList.contains('collapsed')) {
+                this.mainContent.classList.add('shifted');
+            } else {
+                this.mainContent.classList.remove('shifted');
+            }
         });
+
 
         if (window.innerWidth <= 768) {
             this.sidebar.classList.add('collapsed');
         }
+        
         
         // Envio por botão
         this.sendButton.addEventListener('click', () => this.sendMessage());

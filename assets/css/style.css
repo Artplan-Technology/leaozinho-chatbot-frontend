@@ -691,6 +691,7 @@ body {
         height: 100vh;
         z-index: 1000;
         box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+        width: 300px;
     }
     
     .sidebar.collapsed {
@@ -706,4 +707,22 @@ body {
         margin-left: 0;
         justify-content: flex-start;
     }
+
+    body, .app-container {
+        overflow: unset;
+    }
+
+    #messageInput {
+        min-height: 35px;
+    }
+
+    #main-content {
+        transition: transform 0.3s ease;
+    }
+
+    #main-content.shifted {
+        transform: translateX(300px);
+        transition: transform 0.3s ease;
+    }
 }
+
